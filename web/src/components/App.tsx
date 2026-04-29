@@ -14,7 +14,7 @@ const backgroundImages = [image1, image2, image3, image4, image5, image6];
 
 const handoverData = window?.nuiHandoverData;
 
-debugData([{ action: "playerData", data: { name: "AutLaaw", priority: 100, priorityMessage: "Management | +100" } }], 100);
+debugData([{ action: "playerData", data: { name: "", priority: 100, priorityMessage: "Management | +100" } }], 100);
 
 debugData([{ eventName: "loadProgress", loadFraction: 0.1 }], 1000);
 debugData([{ eventName: "loadProgress", loadFraction: 0.2 }], 2000);
@@ -134,7 +134,7 @@ const App: React.FC = () => {
         <div className="welcome-text">
           <h1 className="player-name">{playerName}</h1>
           <h2 className="welcome-message">
-            Welcome to Sandbox
+            Welcome to Pulsar Framework
             <span className="dots">
               <span className="dot">.</span>
               <span className="dot">.</span>

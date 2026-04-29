@@ -1,4 +1,13 @@
 .loading-screen {
+  --theme-purple-bright: #7c46ff;
+  --theme-purple-main: #5c23e8;
+  --theme-purple-dark: #2a0a66;
+  --theme-purple-soft: #b7a4ff;
+  --theme-text-primary: #f5f0ff;
+  --theme-text-secondary: #d7cafb;
+}
+
+.loading-screen {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -25,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, rgba(19, 7, 45, 0.35) 0%, rgba(26, 10, 66, 0.58) 50%, rgba(12, 3, 34, 0.8) 100%);
   z-index: 2;
 }
 
@@ -41,7 +50,9 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  max-width: 600px;
+  max-width: none;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .bottom-content {
@@ -56,16 +67,18 @@
 }
 
 .logo {
-  max-width: 400px;
-  max-height: 250px;
-  width: auto;
+  max-width: 680px;
+  max-height: 420px;
+  width: min(88vw, 680px);
   height: auto;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 52px auto;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
-  animation: fadeInDown 1s ease-out;
+  animation: none;
   display: block;
-  position: relative;
+  position: static;
   z-index: 1;
+  object-position: center;
+  transform: translateX(-52px);
 }
 
 .welcome-text {
@@ -73,6 +86,7 @@
   margin-bottom: 40px;
   animation: fadeIn 1.5s ease-out;
   height: 120px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +96,7 @@
 .player-name {
   font-size: 48px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--theme-text-primary);
   margin: 0 0 15px 0;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   letter-spacing: 1px;
@@ -97,7 +111,7 @@
 .welcome-message {
   font-size: 32px;
   font-weight: 400;
-  color: #e0e0e0;
+  color: var(--theme-text-secondary);
   margin: 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -136,7 +150,7 @@
 
 .loading-text {
   font-size: 20px;
-  color: #ffffff;
+  color: var(--theme-text-primary);
   margin: 0;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
   min-height: 30px;
@@ -146,18 +160,18 @@
 .progress-bar-container {
   width: 100%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(124, 70, 255, 0.2);
   overflow: hidden;
   border-radius: 3px;
 }
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+  background: linear-gradient(90deg, var(--theme-purple-dark) 0%, var(--theme-purple-bright) 50%, var(--theme-purple-main) 100%);
   background-size: 200% 100%;
   transition: width 0.3s ease-out;
   animation: shimmer 2s linear infinite;
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+  box-shadow: 0 0 20px rgba(124, 70, 255, 0.65);
 }
 
 .priority-container {
@@ -170,17 +184,17 @@
 
 .priority-section {
   padding: 16px 20px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(28, 9, 71, 0.45);
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(183, 164, 255, 0.35);
   min-width: 200px;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 12px rgba(23, 7, 62, 0.4);
 }
 
 .priority-title {
   font-size: 16px;
-  color: #ff6b35;
+  color: var(--theme-purple-soft);
   text-align: left;
   font-weight: 600;
   margin-bottom: 8px;
@@ -189,7 +203,7 @@
 
 .priority-message {
   font-size: 14px;
-  color: #e8e8e8;
+  color: var(--theme-text-primary);
   text-align: left;
   font-weight: 500;
   line-height: 1.5;
@@ -204,25 +218,25 @@
 }
 
 .completed-stage {
-  color: #ffffff;
+  color: var(--theme-text-primary);
   font-weight: bold;
   font-size: 20px;
 }
 
 .completed-stage::after {
-  color: #ff6b35;
+  color: var(--theme-purple-bright);
   content: '": COMPLETED,"';
   margin-right: 24px;
 }
 
 .current-stage {
-  color: #ffffff;
+  color: var(--theme-text-primary);
   font-weight: bold;
   font-size: 20px;
 }
 
 .current-stage::after {
-  color: #ff6b35;
+  color: var(--theme-purple-soft);
   content: '": IN PROGRESS,"';
   margin-right: 24px;
 }

@@ -1,7 +1,7 @@
 fx_version "cerulean"
 game 'gta5'
-description "Pulsar Framework Loading Screen"
-author "Pulsar Framework"
+description "Sandbox Loading Screen"
+author "Sandbox"
 
 loadscreen 'web/build/index.html'
 loadscreen_manual_shutdown 'yes'
