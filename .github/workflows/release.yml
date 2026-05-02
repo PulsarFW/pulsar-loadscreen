@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -36,6 +36,7 @@ jobs:
           mkdir -p ./temp/pulsar-loadscreen
           cp ./{README.md,fxmanifest.lua,LICENSE} ./temp/pulsar-loadscreen
           cp -r ./web ./temp/pulsar-loadscreen
+          cp -r ./server ./temp/pulsar-loadscreen
           rm -rf ./temp/pulsar-loadscreen/web/node_modules
           cd ./temp && zip -r ../pulsar-loadscreen.zip ./pulsar-loadscreen
 
