@@ -5,7 +5,7 @@ description "Pulsar Loading Screen"
 author "Pulsar"
 version '1.0.3'
 
-server_script 'version.lua'
+server_script 'server/version.lua'
 
 loadscreen 'web/build/index.html'
 loadscreen_manual_shutdown 'yes'
