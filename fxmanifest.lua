@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 description "Pulsar Loading Screen"
 author "Pulsar"
-version '1.0.3'
+version '1.0.4'
 
 server_script 'server/version.lua'
 
